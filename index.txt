@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>VetFlow – Low-Cost Automation for Veterinaries</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root{
+      --primary:#005256;
+      --primary-light:#007a80;
+      --bg:#f7f9fa;
+      --text:#222;
+      --white:#fff;
+      --radius:8px;
+      --max-width:1200px;
+      --transition:.25s ease-in-out;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;}
+    body{background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;}
+    img{max-width:100%;display:block;}
+    a{color:inherit;text-decoration:none;}
+    h1,h2,h3{line-height:1.2;margin-bottom:.5em;font-weight:700;color:var(--primary);}
+    h1{font-size:2rem;}
+    h2{font-size:1.5rem;}
+    p{margin-bottom:1em;font-size:1rem;}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      min-height:44px;padding:.75rem 1.5rem;border:none;border-radius:var(--radius);
+      background:var(--primary);color:var(--white);font-size:1rem;cursor:pointer;
+      transition:var(--transition);
+    }
+    .btn:hover{background:var(--primary-light);}
+    .btn--ghost{background:transparent;color:var(--primary);border:2px solid var(--primary);}
+    .btn--ghost:hover{background:var(--primary);color:var(--white);}
+    .container{width:90%;max-width:var(--max-width);margin:0 auto;}
+    header{padding:1rem 0;background:var(--white);box-shadow:0 2px 4px rgba(0,0,0,.05);}
+    .hero{
+      display:flex;flex-direction:column;gap:2rem;padding:3rem 0;
+      align-items:center;text-align:center;
+    }
+    .hero__content{flex:1;}
+    .hero__img{flex:1;max-width:500px;}
+    .services{
+      display:grid;gap:1.5rem;padding:3rem 0;
+      grid-template-columns:1fr;
+    }
+    .service-card{
+      background:var(--white);border-radius:var(--radius);padding:1.5rem;
+      box-shadow:0 2px 6px rgba(0,0,0,.05);text-align:center;
+      transition:var(--transition);
+    }
+    .service-card:hover{transform:translateY(-4px);}
+    .service-card i{font-size:2.5rem;color:var(--primary);margin-bottom:1rem;}
+    .cases{padding:3rem 0;background:var(--white);}
+    .case-grid{
+      display:grid;gap:1.5rem;grid-template-columns:1fr;
+    }
+    .case-card{
+      background:var(--bg);border-radius:var(--radius);padding:1.5rem;
+      box-shadow:0 2px 4px rgba(0,0,0,.05);
+    }
+    .case-card h3{margin-bottom:.5rem;}
+    .contact{padding:3rem 0;}
+    form{
+      display:grid;gap:1rem;max-width:600px;margin:0 auto;
+    }
+    input,textarea{
+      width:100%;padding:.75rem;border:1px solid #ccc;border-radius:var(--radius);font-size:1rem;
+    }
+    textarea{resize:vertical;min-height:120px;}
+    footer{
+      background:var(--primary);color:var(--white);padding:2rem 0;text-align:center;
+    }
+    footer .social{
+      display:flex;gap:1rem;justify-content:center;margin-top:1rem;font-size:1.25rem;
+    }
+    footer .social a:hover{opacity:.8;}
+    @media(min-width:768px){
+      h1{font-size:2.5rem;}
+      h2{font-size:1.75rem;}
+      .hero{flex-direction:row;text-align:left;}
+      .services{grid-template-columns:repeat(2,1fr);}
+      .case-grid{grid-template-columns:repeat(3,1fr);}
+    }
+    @media(min-width:1024px){
+      .services{grid-template-columns:repeat(4,1fr);}
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="container">
+      <img src="https://placehold.co/180x48/005256/ffffff?text=VetFlow" alt="VetFlow Logo">
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero container">
+    <div class="hero__content">
+      <h1>Automate Your Vet Practice—Without Breaking the Bank</h1>
+      <p>VetFlow streamlines appointments, reminders, billing & records so you can focus on care, not paperwork.</p>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.5rem">
+        <a href="#contact" class="btn">Book a Free Demo</a>
+        <a href="#services" class="btn btn--ghost">See How It Works</a>
+      </div>
+    </div>
+    <div class="hero__img">
+      <!-- YOUR UPLOADED IMAGE -->
+      <img src="image.png" alt="Veterinary automation illustration">
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services container" id="services">
+    <h2 style="text-align:center;margin-bottom:2rem">Everything You Need to Run Smoother</h2>
+    <article class="service-card">
+      <i class="fa-solid fa-calendar-check"></i>
+      <h3>Smart Scheduling</h3>
+      <p>Auto-book appointments, send reminders, and reduce no-shows by 30%.</p>
+    </article>
+    <article class="service-card">
+      <i class="fa-solid fa-file-invoice-dollar"></i>
+      <h3>Instant Billing</h3>
+      <p>Generate invoices, process payments, and sync with accounting in one click.</p>
+    </article>
+    <article class="service-card">
+      <i class="fa-solid fa-shield-halved"></i>
+      <h3>Secure Records</h3>
+      <p>Cloud-based patient files with bank-level encryption & fast search.</p>
+    </article>
+    <article class="service-card">
+      <i class="fa-solid fa-chart-line"></i>
+      <h3>Insight Reports</h3>
+      <p>Track revenue, client trends & staff performance at a glance.</p>
+    </article>
+  </section>
+
+  <!-- CLIENT CASES -->
+  <section class="cases">
+    <div class="container">
+      <h2 style="text-align:center;margin-bottom:2rem">Trusted by Clinics Like Yours</h2>
+      <div class="case-grid">
+        <article class="case-card">
+          <h3>Paws & Whiskers Clinic</h3>
+          <p><strong>48% less</strong> time spent on admin within 3 months.</p>
+          <p>“VetFlow paid for itself in the first month.” — Dr. Lee</p>
+        </article>
+        <article class="case-card">
+          <h3>Urban Animal Hospital</h3>
+          <p><strong>+22% revenue</strong> after automated follow-ups.</p>
+          <p>“Clients love the SMS reminders.” — Practice Manager Kim</p>
+        </article>
+        <article class="case-card">
+          <h3>Country Vet Partners</h3>
+          <p><strong>5 locations</strong> managed from one dashboard.</p>
+          <p>“Multi-site visibility is a game-changer.” — Owner Carlos</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact container" id="contact">
+    <h2 style="text-align:center;margin-bottom:2rem">Let’s Connect</h2>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <label><input type="text" name="Name" placeholder="Your Name" required></label>
+      <label><input type="email" name="Email" placeholder="Email Address" required></label>
+      <label><input type="text" name="Company" placeholder="Clinic / Company" required></label>
+      <label><textarea name="Message" placeholder="Tell us about your needs…" required></textarea></label>
+      <button class="btn" type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="year"></span> VetFlow. All rights reserved.</p>
+      <div class="social">
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Dynamic year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
