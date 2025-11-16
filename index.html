@@ -8,10 +8,10 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <!-- Core Bandi Face solo para “VetFlow” -->
+  <!-- Core Bandi Face → VetFlow brand only -->
   <link href="https://fonts.cdnfonts.com/css/core-bandi-face" rel="stylesheet">
 
-  <!-- TT Hoves para el resto -->
+  <!-- TT Hoves → everything else -->
   <link href="https://fonts.cdnfonts.com/css/tt-hoves" rel="stylesheet">
 
   <style>
@@ -27,8 +27,9 @@
     }
     *{box-sizing:border-box;margin:0;padding:0;}
     body{
-      background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;
-      font-family:'TT Hoves',sans-serif; /* todo el texto */
+      background:var(--bg);color:var(--text);line-height:1.6;
+      font-family:'TT Hoves',sans-serif;
+      -webkit-font-smoothing:antialiased;
     }
     img{max-width:100%;display:block;}
     a{color:inherit;text-decoration:none;}
@@ -37,10 +38,8 @@
     h2{font-size:1.5rem;}
     p{margin-bottom:1em;font-size:1rem;}
 
-    /* VetFlow siempre Core Bandi Face */
-    .vetflow-font{
-      font-family:'Core Bandi Face',sans-serif;
-    }
+    /* Brand font */
+    .vetflow-font{font-family:'Core Bandi Face',sans-serif;}
 
     .btn{
       display:inline-flex;align-items:center;justify-content:center;
@@ -70,17 +69,27 @@
     }
     .service-card:hover{transform:translateY(-4px);}
     .service-card i{font-size:2.5rem;color:var(--primary);margin-bottom:1rem;}
-    .cases{padding:3rem 0;background:var(--white);}
-    .case-grid{
-      display:grid;gap:1.5rem;grid-template-columns:1fr;
-    }
-    .case-card{
-      background:var(--bg);border-radius:var(--radius);padding:1.5rem;
-      box-shadow:0 2px 4px rgba(0,0,0,.05);
-    }
-    .case-card h3{margin-bottom:.5rem;}
 
-    /* FAQ styles */
+    /* ---- NEW CASE-STYLES ---- */
+    .case-story{padding:3rem 0;background:var(--white);}
+    .case-story h2{text-align:center;margin-bottom:2rem;}
+    .story-card{
+      background:var(--bg);border-radius:var(--radius);padding:2rem;
+      box-shadow:0 2px 4px rgba(0,0,0,.05);max-width:900px;margin:0 auto;
+    }
+    .story-header{display:flex;gap:1.5rem;align-items:center;margin-bottom:1.5rem;flex-wrap:wrap;}
+    .story-header img{width:80px;height:80px;border-radius:50%;object-fit:cover;background:var(--primary);}
+    .story-header div h3{margin-bottom:.25rem;}
+    .story-header div p{color:#555;font-size:.95rem;}
+    .story-content{display:grid;gap:1.5rem;}
+    .before-after{display:grid;gap:1rem;grid-template-columns:1fr;}
+    .before-after>div{padding:1.25rem;border-left:4px solid var(--primary-light);background:#fff;border-radius:var(--radius);}
+    .before-after h4{margin-bottom:.5rem;color:var(--primary);}
+    .metrics{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));margin-top:1.5rem;}
+    .metric{background:var(--white);padding:1rem;border-radius:var(--radius);text-align:center;box-shadow:0 1px 3px rgba(0,0,0,.05);}
+    .metric strong{display:block;font-size:1.5rem;color:var(--primary);}
+
+    /* FAQ */
     .faq{padding:3rem 0;}
     .faq-item{
       background:var(--white);border-radius:var(--radius);margin-bottom:1rem;
@@ -101,6 +110,7 @@
     .faq-item.active .faq-answer{
       max-height:300px;padding-bottom:1rem;
     }
+
     .contact{padding:3rem 0;}
     form{
       display:grid;gap:1rem;max-width:600px;margin:0 auto;
@@ -122,19 +132,19 @@
       h2{font-size:1.75rem;}
       .hero{flex-direction:row;text-align:left;}
       .services{grid-template-columns:repeat(2,1fr);}
-      .case-grid{grid-template-columns:repeat(3,1fr);}
+      .before-after{grid-template-columns:1fr 1fr;}
     }
     @media(min-width:1024px){
       .services{grid-template-columns:repeat(4,1fr);}
     }
   </style>
-  <base target="_blank">
 </head>
 <body>
   <!-- HEADER -->
   <header>
     <div class="container">
-      <img src="https://placehold.co/180x48/005256/ffffff?text=VetFlow" alt="VetFlow Logo">
+      <!-- SVG LOGO -->
+      <img src="Diseño-sin-título.svg" alt="VetFlow Logo" style="height:48px">
     </div>
   </header>
 
@@ -142,7 +152,7 @@
   <section class="hero container">
     <div class="hero__content">
       <h1>Automate Your Vet Practice—Without Breaking the Bank</h1>
-      <p>VetFlow streamlines appointments, reminders, billing & records so you can focus on care, not paperwork.</p>
+      <p><span class="vetflow-font">VetFlow</span> streamlines appointments, reminders, billing & records so you can focus on care, not paperwork.</p>
       <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.5rem">
         <a href="#contact" class="btn">Book a Free Demo</a>
         <a href="#services" class="btn btn--ghost">See How It Works</a>
@@ -178,26 +188,57 @@
     </article>
   </section>
 
-  <!-- CLIENT CASES -->
-  <section class="cases">
+  <!-- HAPPY PAWS CASE STUDY -->
+  <section class="case-story">
     <div class="container">
-      <h2 style="text-align:center;margin-bottom:2rem">Trusted by Clinics Like Yours</h2>
-      <div class="case-grid">
-        <article class="case-card">
-          <h3>Paws & Whiskers Clinic</h3>
-          <p><strong>48% less</strong> time spent on admin within 3 months.</p>
-          <p>“VetFlow paid for itself in the first month.” — Dr. Lee</p>
-        </article>
-        <article class="case-card">
-          <h3>Urban Animal Hospital</h3>
-          <p><strong>+22% revenue</strong> after automated follow-ups.</p>
-          <p>“Clients love the SMS reminders.” — Practice Manager Kim</p>
-        </article>
-        <article class="case-card">
-          <h3>Country Vet Partners</h3>
-          <p><strong>5 locations</strong> managed from one dashboard.</p>
-          <p>“Multi-site visibility is a game-changer.” — Owner Carlos</p>
-        </article>
+      <h2>Happy Paws: From Admin Chaos to 30 % Fewer No-Shows</h2>
+      <div class="story-card">
+        <div class="story-header">
+          <img src="https://placehold.co/160x160/007a80/ffffff?text=👩‍⚕️" alt="Dr Mariana">
+          <div>
+            <h3>Dr. Mariana</h3>
+            <p>Veterinarian & Owner – “Happy Paws” <br>
+              Small clinic | 2 vets | 2 assistants</p>
+          </div>
+        </div>
+
+        <div class="story-content">
+          <div class="before-after">
+            <div>
+              <h4>❌ BEFORE VetFlow</h4>
+              <ul>
+                <li>3–4 h/day sending reminders manually (WhatsApp + Excel)</li>
+                <li>Frequent no-shows → lost revenue</li>
+                <li>Zero proactive post-op follow-up</li>
+                <li>Team stress & overtime</li>
+              </ul>
+            </div>
+            <div>
+              <h4>✅ AFTER VetFlow (first 60 days)</h4>
+              <ul>
+                <li>Auto WhatsApp reminders 24 h & 2 h before every appointment</li>
+                <li>Vaccination & surgery check-up campaigns run on autopilot</li>
+                <li>10–15 h/week reclaimed for patient care</li>
+                <li>Staff finish on time—no more late nights copying lists</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="metrics">
+            <div class="metric">
+              <strong>30 %</strong>
+              <span>fewer missed appointments</span>
+            </div>
+            <div class="metric">
+              <strong>10 +</strong>
+              <span>hours saved per week</span>
+            </div>
+            <div class="metric">
+              <strong>90 %</strong>
+              <span>clients “very satisfied” with reminders</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
