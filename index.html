@@ -67,28 +67,28 @@
     .service-card:hover{transform:translateY(-4px);}
     .service-card i{font-size:2.5rem;color:var(--primary);margin-bottom:1rem;}
 
-   /* ---- VIDEO SECTION ---- */
-.video-sec{
-  padding:4rem 0;
-  background:var(--white);
-}
-.video-wrapper{
-  position:relative;
-  padding-bottom:56.25%; /* 16:9 estándar de YouTube */
-  height:0;
-  overflow:hidden;
-  max-width:800px; /* Tamaño natural de YouTube */
-  margin:0 auto;
-  border-radius:var(--radius);
-  box-shadow:0 4px 12px rgba(0,0,0,.1);
-}
-.video-wrapper iframe{
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-}
+    /* ---- VIDEO SECTION ---- */
+    .video-sec{
+      padding:4rem 0;
+      background:var(--white);
+    }
+    .video-wrapper{
+      position:relative;
+      padding-bottom:56.25%; /* 16:9 estándar de YouTube */
+      height:0;
+      overflow:hidden;
+      max-width:800px; /* Tamaño natural de YouTube */
+      margin:0 auto;
+      border-radius:var(--radius);
+      box-shadow:0 4px 12px rgba(0,0,0,.1);
+    }
+    .video-wrapper iframe{
+      position:absolute;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+    }
 
     /* ---- CASE STUDY ---- */
     .case-story{padding:3rem 0;background:var(--white);width:100vw;margin-left:calc(-50vw + 50%);}
@@ -183,42 +183,43 @@
   </section>
 
   <!-- VIDEO SECTION (sin título) -->
-<section id="video" class="video-sec">
-  <div class="container">
-    <div class="video-wrapper">
-      <iframe
-        src="https://www.youtube.com/embed/L7pEO_DFLko"
-        title="VetFlow Demo"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-      </iframe>
+  <section id="video" class="video-sec">
+    <div class="container">
+      <div class="video-wrapper">
+        <iframe
+          src="https://www.youtube.com/embed/L7pEO_DFLko"
+          title="VetFlow Demo"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- SERVICES -->
   <section class="services container" id="services">
     <h2 style="text-align:center;margin-bottom:2rem">Everything You Need to Run Smoother</h2>
+    
+    <!-- Smart Scheduling (sin cambios) -->
     <article class="service-card">
       <i class="fa-solid fa-calendar-check"></i>
       <h3>Smart Scheduling</h3>
       <p>Auto-book appointments, send reminders, and reduce no-shows by 30%.</p>
     </article>
+
+    <!-- WhatsApp Integration -->
     <article class="service-card">
-      <i class="fa-solid fa-file-invoice-dollar"></i>
-      <h3>Instant Billing</h3>
-      <p>Generate invoices, process payments, and sync with accounting in one click.</p>
+      <i class="fa-brands fa-whatsapp"></i>
+      <h3>Full integration with WhatsApp</h3>
+      <p>Control Gmail, Google Calendar and Sheets through simple voice notes or text messages.</p>
     </article>
+
+    <!-- Email Administration -->
     <article class="service-card">
-      <i class="fa-solid fa-shield-halved"></i>
-      <h3>Secure Records</h3>
-      <p>Cloud-based patient files with bank-level encryption & fast search.</p>
-    </article>
-    <article class="service-card">
-      <i class="fa-solid fa-chart-line"></i>
-      <h3>Insight Reports</h3>
-      <p>Track revenue, client trends & staff performance at a glance.</p>
+      <i class="fa-solid fa-envelope"></i>
+      <h3>Email administration</h3>
+      <p>Manage your inbox with our automation system, Vetty. Functions like checking, deleting and sending emails.</p>
     </article>
   </section>
 
