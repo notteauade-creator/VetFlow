@@ -67,28 +67,28 @@
     .service-card:hover{transform:translateY(-4px);}
     .service-card i{font-size:2.5rem;color:var(--primary);margin-bottom:1rem;}
 
-    /* ---- VIDEO SECTION ---- */
-    .video-sec{
-      padding:4rem 0;
-      background:var(--white);
-    }
-    .video-wrapper{
-      position:relative;
-      padding-bottom:40%; /* Más rectangular (menos alto) */
-      height:0;
-      overflow:hidden;
-      max-width:1000px; /* Más ancho */
-      margin:0 auto;
-      border-radius:var(--radius);
-      box-shadow:0 4px 12px rgba(0,0,0,.1);
-    }
-    .video-wrapper iframe{
-      position:absolute;
-      top:0;
-      left:0;
-      width:100%;
-      height:100%;
-    }
+   /* ---- VIDEO SECTION ---- */
+.video-sec{
+  padding:4rem 0;
+  background:var(--white);
+}
+.video-wrapper{
+  position:relative;
+  padding-bottom:56.25%; /* 16:9 estándar de YouTube */
+  height:0;
+  overflow:hidden;
+  max-width:800px; /* Tamaño natural de YouTube */
+  margin:0 auto;
+  border-radius:var(--radius);
+  box-shadow:0 4px 12px rgba(0,0,0,.1);
+}
+.video-wrapper iframe{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+}
 
     /* ---- CASE STUDY ---- */
     .case-story{padding:3rem 0;background:var(--white);width:100vw;margin-left:calc(-50vw + 50%);}
@@ -183,19 +183,19 @@
   </section>
 
   <!-- VIDEO SECTION (sin título) -->
-  <section id="video" class="video-sec">
-    <div class="container">
-      <div class="video-wrapper">
-        <iframe
-          src="https://www.youtube.com/embed/L7pEO_DFLko"
-          title="VetFlow Demo"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
-      </div>
+<section id="video" class="video-sec">
+  <div class="container">
+    <div class="video-wrapper">
+      <iframe
+        src="https://www.youtube.com/embed/L7pEO_DFLko"
+        title="VetFlow Demo"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- SERVICES -->
   <section class="services container" id="services">
