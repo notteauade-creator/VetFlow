@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>VetFlow.</title>
+  <title>VetFlow – Low-Cost Automation for Veterinaries</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Favicon desde tu PNG -->
-  <link rel="icon" type="image/jpeg" href="favicon.JPG">
+  <link rel="icon" type="image/png" href="Diseno_sin_titulo_1.png">
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -66,6 +66,29 @@
     }
     .service-card:hover{transform:translateY(-4px);}
     .service-card i{font-size:2.5rem;color:var(--primary);margin-bottom:1rem;}
+
+    /* ---- VIDEO SECTION ---- */
+    .video-sec{
+      padding:4rem 0;
+      background:var(--white);
+    }
+    .video-wrapper{
+      position:relative;
+      padding-bottom:56.25%; /* 16:9 */
+      height:0;
+      overflow:hidden;
+      max-width:800px;
+      margin:0 auto;
+      border-radius:var(--radius);
+      box-shadow:0 4px 12px rgba(0,0,0,.1);
+    }
+    .video-wrapper iframe{
+      position:absolute;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+    }
 
     /* ---- CASE STUDY ---- */
     .case-story{padding:3rem 0;background:var(--white);width:100vw;margin-left:calc(-50vw + 50%);}
@@ -145,20 +168,35 @@
   </header>
 
   <!-- HERO -->
-<section class="hero container">
-  <div class="hero__content">
-    <h1>Focus on the <em>paws</em>,<br><strong>not the paperwork.</strong></h1>
-    <p><span class="vetflow-font">VetFlow</span> is a low-cost, cloud-based automation software that integrates seamlessly with tools you already use.</p>
-    <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.5rem">
-      <a href="#contact" class="btn">Book a Free Demo</a>
-      <a href="#services" class="btn btn--ghost">See How It Works</a>
+  <section class="hero container">
+    <div class="hero__content">
+      <h1>Focus on the <em>paws</em>,<br><strong>not the paperwork.</strong></h1>
+      <p><span class="vetflow-font">VetFlow</span> is a low-cost, cloud-based automation software that integrates seamlessly with tools you already use.</p>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.5rem">
+        <a href="#contact" class="btn">Book a Free Demo</a>
+        <a href="#services" class="btn btn--ghost">See How It Works</a>
+      </div>
     </div>
-  </div>
-  <div class="hero__img">
-    <!-- ✅ NUEVA ILUSTRACIÓN -->
-    <img src="meet.png" alt="Vetty">
-  </div>
-</section>
+    <div class="hero__img">
+      <img src="meet.png" alt="Veterinary automation illustration">
+    </div>
+  </section>
+
+  <!-- VIDEO SECTION -->
+  <section id="video" class="video-sec">
+    <div class="container">
+      <h2 style="text-align:center;margin-bottom:1.5rem;">See How It Works</h2>
+      <div class="video-wrapper">
+        <iframe
+          src="https://www.youtube.com/embed/L7pEO_DFLko"
+          title="VetFlow Demo"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </section>
 
   <!-- SERVICES -->
   <section class="services container" id="services">
