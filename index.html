@@ -237,19 +237,11 @@
         </div>
       </div>
 
-      <div class="slide-results">
-        <div class="metric">
-          <strong>30 %</strong>
-          <span>fewer missed appointments</span>
-        </div>
-        <div class="metric">
-          <strong>10 +</strong>
-          <span>hours saved per week</span>
-        </div>
-        <div class="metric">
-          <strong>90 %</strong>
-          <span>clients “very satisfied”</span>
-        </div>
+      <!-- MÉTRICAS EN LÍNEA -->
+      <div class="slide-results-inline">
+        <div class="metric"><strong>30 %</strong><span>fewer missed appointments</span></div>
+        <div class="metric"><strong>10 +</strong><span>hours saved per week</span></div>
+        <div class="metric"><strong>90 %</strong><span>clients “very satisfied”</span></div>
       </div>
 
       <a href="https://www.canva.com/design/DAG448ceL1g/T2rk-v5Ah9CfUNGMKKIP0g/edit?utm_content=DAG448ceL1g&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" 
@@ -278,7 +270,7 @@
   background:var(--bg);
   border-radius:var(--radius);
   padding:2.5rem 2rem;
-  max-width:700px;
+  max-width:900px;
   margin:0 auto;
   box-shadow:0 2px 8px rgba(0,0,0,.05);
   text-align:center;
@@ -295,22 +287,23 @@
 .slide-header div h3{margin-bottom:.25rem;}
 .slide-header div p{color:#555;font-size:.95rem;}
 
-.slide-results{
+/* MÉTRICAS EN LÍNEA */
+.slide-results-inline{
   display:flex;
   gap:1.5rem;
   justify-content:center;
   flex-wrap:wrap;
   margin-bottom:2rem;
 }
-.slide-results .metric{
+.slide-results-inline .metric{
   background:var(--white);
   padding:1rem 1.5rem;
   border-radius:var(--radius);
   box-shadow:0 1px 3px rgba(0,0,0,.05);
   min-width:160px;
 }
-.slide-results .metric strong{display:block;font-size:1.5rem;color:var(--primary);}
-.slide-results .metric span{font-size:.9rem;color:#555;}
+.slide-results-inline .metric strong{display:block;font-size:1.5rem;color:var(--primary);}
+.slide-results-inline .metric span{font-size:.9rem;color:#555;}
 
 .btn--outline{
   background:transparent;
